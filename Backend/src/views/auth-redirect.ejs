@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication Redirect</title>
+  </head>
+  <body>
+    <h1>Authentication Successful</h1>
+    <p>Redirecting...</p>
+
+    <script>
+      // The `env` object is dynamically rendered into the page using EJS syntax
+      const env = <%- JSON.stringify(env) %>;
+
+      // Get the token from the URL's query parameters
+      const token = new URLSearchParams(window.location.search).get("token");
+
+      if (token) {
+        // Construct the domain and redirect URL
+        const domain = env.HOSTNAME_FE + "/auth";
+
+        // Redirect to the main page of the application with the token
+        window.location.href = `${domain}?token=${token}`;
+      } else {
+        // Display an error message if no token is found
+        document.body.innerHTML += "<p>Error: No token found</p>";
+      }
+    </script>
+  </body>
+</html>

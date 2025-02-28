@@ -1,0 +1,1 @@
+Backend & Frontend: Clone repo => cd backend/frontend => npm i => npm run dev
