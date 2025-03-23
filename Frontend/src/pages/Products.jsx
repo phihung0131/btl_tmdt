@@ -21,12 +21,12 @@ const Products = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Tiệm Giày Đóm | Sản phẩm";
+    document.title = "Tiệm Giày DOM | Sản phẩm";
     switch (location.pathname) {
       case "/products":
         break;
       case "/man":
-        document.title = "Tiệm Giày Đóm | Giày Nam";
+        document.title = "Tiệm Giày DOM | Giày Nam";
         setNavItems(
           [
             { title: "Giày Chạy Bộ Nam" },
@@ -43,7 +43,7 @@ const Products = () => {
         );
         break;
       case "/woman":
-        document.title = "Tiệm Giày Đóm | Giày Nữ";
+        document.title = "Tiệm Giày DOM | Giày Nữ";
         setNavItems(
           [
             { title: "Giày Chạy Bộ Nữ" },
@@ -61,7 +61,7 @@ const Products = () => {
         );
         break;
       case "/kid":
-        document.title = "Tiệm Giày Đóm | Giày Trẻ Em";
+        document.title = "Tiệm Giày DOM | Giày Trẻ Em";
         setNavItems(
           [
             { title: "Giày Thể Thao Kid" },

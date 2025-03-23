@@ -50,9 +50,8 @@ const StatusEdit = ({ currentStatus }) => {
   return (
     <div className="flex items-center gap-4">
       <div
-        className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium ${
-          statusConfig[currentStatus]?.color
-        }`}
+        className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium ${statusConfig[currentStatus]?.color
+          }`}
       >
         {statusConfig[currentStatus]?.icon &&
           React.createElement(statusConfig[currentStatus].icon, {
@@ -86,7 +85,7 @@ const OrderDetail = () => {
   };
 
   useEffect(() => {
-    document.title = "Tiệm Giày Đóm | Chi tiết đơn hàng";
+    document.title = "Tiệm Giày DOM | Chi tiết đơn hàng";
     apiService
       .getOrder(id)
       .then((res) => {

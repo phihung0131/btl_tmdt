@@ -17,7 +17,7 @@ const Register = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Tiệm Giày Đóm | Đăng ký";
+    document.title = "Tiệm Giày DOM | Đăng ký";
   }, []);
 
   const handleRegister = () => {

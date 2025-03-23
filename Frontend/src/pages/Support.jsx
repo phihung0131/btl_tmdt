@@ -99,7 +99,7 @@ const Support = () => {
   };
 
   useEffect(() => {
-    document.title = "Tiệm Giày Đóm | Hỗ Trợ";
+    document.title = "Tiệm Giày DOM | Hỗ Trợ";
     apiService
       .getSupportTickers()
       .then((res) => {
@@ -136,11 +136,10 @@ const Support = () => {
                     <div className="flex items-center gap-2">
                       <h3 className="font-medium">{ticket.subject}</h3>
                       <span
-                        className={`rounded-full px-2 py-1 text-xs ${
-                          ticket.status === "pending"
+                        className={`rounded-full px-2 py-1 text-xs ${ticket.status === "pending"
                             ? "bg-yellow-100 text-yellow-800"
                             : "bg-green-100 text-green-800"
-                        }`}
+                          }`}
                       >
                         {ticket.status}
                       </span>
@@ -207,11 +206,10 @@ const Support = () => {
                     <button
                       key={page}
                       onClick={() => setCurrentPage(page)}
-                      className={`rounded-lg border px-4 py-2 hover:bg-gray-50 ${
-                        currentPage === page
+                      className={`rounded-lg border px-4 py-2 hover:bg-gray-50 ${currentPage === page
                           ? "bg-[#FF3D00] text-white hover:bg-[#FF3D00]/90"
                           : ""
-                      }`}
+                        }`}
                     >
                       {page}
                     </button>

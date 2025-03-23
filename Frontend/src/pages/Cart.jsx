@@ -23,7 +23,7 @@ const Cart = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Tiệm Giày Đóm | Giỏ Hàng";
+    document.title = "Tiệm Giày DOM | Giỏ Hàng";
     apiService
       .getCarts()
       .then((res) => {

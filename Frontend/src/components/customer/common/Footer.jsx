@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <h4 className="mb-6 text-lg font-semibold text-[#FFA726]">
-            Quick Links
+            Về chúng tôi
           </h4>
           <ul className="space-y-5">
             <li>
@@ -14,7 +14,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Our Story
+                Câu chuyện của DOM
               </a>
             </li>
             <li>
@@ -22,7 +22,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Newsroom
+                Tin tức
               </a>
             </li>
             <li>
@@ -30,7 +30,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Careers
+                Tuyển dụng
               </a>
             </li>
             <li>
@@ -38,7 +38,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Blog
+                Bài viết
               </a>
             </li>
           </ul>
@@ -46,7 +46,7 @@ const Footer = () => {
 
         <div>
           <h4 className="mb-6 text-lg font-semibold text-[#FFA726]">
-            Services
+            Sản phẩm
           </h4>
           <ul className="space-y-5">
             <li>
@@ -54,7 +54,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Web Development
+                Giày Nam
               </a>
             </li>
             <li>
@@ -62,7 +62,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Testing Automation
+                Giày Nữ
               </a>
             </li>
             <li>
@@ -70,7 +70,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                AWS Development Services
+                Giày Trẻ Em
               </a>
             </li>
             <li>
@@ -78,7 +78,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Mobile App Development
+                Phụ kiện giày
               </a>
             </li>
           </ul>
@@ -86,7 +86,7 @@ const Footer = () => {
 
         <div>
           <h4 className="mb-6 text-lg font-semibold text-[#FFA726]">
-            Platforms
+            Chính sách
           </h4>
           <ul className="space-y-5">
             <li>
@@ -94,7 +94,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Hubspot
+                Chính sách đổi trả
               </a>
             </li>
             <li>
@@ -102,7 +102,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Marketo Integration Services
+                Chính sách bảo hành
               </a>
             </li>
             <li>
@@ -110,7 +110,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Marketing Glossary
+                Chính sách vận chuyển
               </a>
             </li>
             <li>
@@ -118,21 +118,21 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                UIPath
+                Hướng dẫn thanh toán
               </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="mb-6 text-lg font-semibold text-[#FFA726]">Company</h4>
+          <h4 className="mb-6 text-lg font-semibold text-[#FFA726]">Liên hệ</h4>
           <ul className="space-y-5">
             <li>
               <a
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Accessibility
+                Hỗ trợ khách hàng
               </a>
             </li>
             <li>
@@ -140,7 +140,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                About
+                Cửa hàng
               </a>
             </li>
             <li>
@@ -148,7 +148,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Contact
+                Liên hệ
               </a>
             </li>
             <li>
@@ -156,7 +156,7 @@ const Footer = () => {
                 href="javascript:void(0)"
                 className="text-[15px] text-gray-300 transition-all hover:text-[#FFA726]"
               >
-                Learn more
+                FAQs
               </a>
             </li>
           </ul>
@@ -165,7 +165,7 @@ const Footer = () => {
 
       <div className="mt-8 border-t border-[#6b5f5f] pt-8 text-center">
         <p className="text-[15px] text-gray-300">
-          © ReadymadeUI. All rights reserved.
+          © Tiệm Giày DOM. Tất cả quyền được bảo lưu.
         </p>
       </div>
     </footer>

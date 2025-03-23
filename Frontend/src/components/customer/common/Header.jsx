@@ -99,9 +99,8 @@ const Header = () => {
 
         <div
           id="collapseMenu"
-          className={`${
-            isMenuOpen ? "block" : "max-lg:hidden"
-          } max-lg:before:fixed max-lg:before:inset-0 max-lg:before:z-50 max-lg:before:bg-black max-lg:before:opacity-50 lg:!block`}
+          className={`${isMenuOpen ? "block" : "max-lg:hidden"
+            } max-lg:before:fixed max-lg:before:inset-0 max-lg:before:z-50 max-lg:before:bg-black max-lg:before:opacity-50 lg:!block`}
         >
           <button
             onClick={toggleMenu}
@@ -239,6 +238,15 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Hỗ trợ
+              </Link>
+            </li>
+            <li className="px-3 max-lg:border-b max-lg:py-3">
+              <Link
+                to="/about-us"
+                className="block text-base font-bold text-white hover:text-[#ff3D00]"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Về chúng tôi
               </Link>
             </li>
           </ul>

@@ -22,6 +22,7 @@ import AdminPromotion from "./pages/admin/AdminPromotion";
 import AdminUser from "./pages/admin/AdminUser";
 import AdminOrderDetail from "./pages/admin/AdminOrderDetail";
 import AdminProductDetail from "./pages/admin/AdminProductDetail";
+import AboutUs from "./pages/AboutUs";
 
 export default function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -30,6 +31,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/" element={<Home />} />
         <Route path="/man" element={<Products />} />
         <Route path="/woman" element={<Products />} />

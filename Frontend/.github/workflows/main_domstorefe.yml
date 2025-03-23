@@ -1,0 +1,73 @@
+name: Build and Deploy Vite React to Azure
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        
+    - name: Install Dependencies
+      run: |
+        npm install
+        npm install --save-dev @babel/plugin-proposal-private-property-in-object
+
+    - name: Build Project
+      env:
+        CI: false
+        REACT_APP_API_URL: 'https://domstore.azurewebsites.net/api/v1'
+      run: npm run build
+
+    - name: Prepare Web Config
+      run: |
+        echo '<?xml version="1.0"?>
+        <configuration>
+          <system.webServer>
+            <rewrite>
+              <rules>
+                <rule name="React Routes" stopProcessing="true">
+                  <match url=".*" />
+                  <conditions logicalGrouping="MatchAll">
+                    <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+                    <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+                  </conditions>
+                  <action type="Rewrite" url="/index.html" />
+                </rule>
+              </rules>
+            </rewrite>
+            <staticContent>
+              <mimeMap fileExtension=".json" mimeType="application/json" />
+              <mimeMap fileExtension=".js" mimeType="application/javascript" />
+              <mimeMap fileExtension=".webp" mimeType="image/webp" />
+            </staticContent>
+            <httpErrors errorMode="Custom" defaultResponseMode="ExecuteURL">
+              <remove statusCode="404"/>
+              <error statusCode="404" path="/index.html" responseMode="ExecuteURL"/>
+            </httpErrors>
+          </system.webServer>
+        </configuration>' > build/web.config
+
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v4
+      with:
+        name: react-app
+        path: build
+
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v3
+      with:
+        app-name: 'domstorefe'
+        slot-name: 'Production'
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E81C738C1E264F7887CEB737488E3D32 }}
+        package: build
